@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>munna calculato.in </title>
+    <style>
+        #screen{
+            width: 193px;
+            height: 35px;
+            background-color: beige;
+            text-align: right;
+            font-size: 30px;
+            border-radius: 7px;
+        }
+        #main{
+            width: 200px;
+            margin: auto;
+            background-color: rgb(199, 122, 27);
+            border-radius: 7px;
+        }
+        .btn{
+            width: 50px;
+            height: 50px;
+            float: left;
+            background-color: rgb(12, 17, 15);
+            color: aliceblue;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <input type="text" name="" id="screen" placeholder="0">
+        <input type="button" name="button" class="btn" value="7" onclick="getText('7')">
+        <input type="button" name="button" class="btn" value="8" onclick="getText('8')">
+        <input type="button" name="button" class="btn" value="9" onclick="getText('9')">
+        <input type="button" name="button" class="btn" value="/" onclick="getText('/')">
+        <input type="button" name="button" class="btn" value="4" onclick="getText('4')">
+        <input type="button" name="button" class="btn" value="5" onclick="getText('5')">
+        <input type="button" name="button" class="btn" value="6" onclick="getText('6')">
+        <input type="button" name="button" class="btn" value="*" onclick="getText('*')">
+        <input type="button" name="button" class="btn" value="1" onclick="getText('1')">
+        <input type="button" name="button" class="btn" value="2" onclick="getText('2')">
+        <input type="button" name="button" class="btn" value="3" onclick="getText('3')">
+        <input type="button" name="button" class="btn" value="-" onclick="getText('-')">
+        <input type="button" name="button" class="btn" value="Clear" onclick="clr()">
+        <input type="button" name="button" class="btn" value="." onclick="getText('.')">
+        <input type="button" name="button" class="btn" value="=" onclick="getresult()">
+        <input type="button" name="button" class="btn" value="+" onclick="getText('+')">
+    </div>
+</body>
+<script>
+    function getText(num)
+    {
+        var text = document.getElementById("screen");
+        text.value += num;
+    }
+    function getresult()
+    {
+        var text = document.getElementById("screen");
+        text.value = eval(text.value);
+    }
+    function clr()
+    {
+        var text = document.getElementById("screen");
+        text.value="";
+    }
+</script>
+</html>
